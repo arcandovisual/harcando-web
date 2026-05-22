@@ -23,7 +23,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "HARCANDO",
-  "description": "Herrería a medida desde 2000 — rejas, barandas, portones, escaleras, estructuras y muebles de hierro en Rosario.",
+  "description": "Herrería a medida en Rosario desde el año 2000. Fabricamos rejas, barandas, portones, escaleras, estructuras metálicas y muebles de hierro. Taller propio, fabricación 100% propia, instalación incluida.",
   "foundingDate": "2000",
   "url": "https://harcando.com.ar",
   "telephone": "+5493416053907",
@@ -35,7 +35,110 @@
     "addressRegion": "Santa Fe",
     "addressCountry": "AR"
   },
-  "areaServed": ["Rosario", "Fisherton", "Funes", "Roldán", "Gran Rosario"]
+  "areaServed": [
+    {"@type": "City", "name": "Rosario"},
+    {"@type": "City", "name": "Fisherton"},
+    {"@type": "City", "name": "Funes"},
+    {"@type": "City", "name": "Roldán"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Líneas de herrería",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rejas a medida"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Barandas de hierro"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Portones corredizos y abatibles"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Escaleras de hierro"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Estructuras metálicas"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Muebles de hierro a medida"}}
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo pedir un presupuesto de herrería en HARCANDO",
+  "description": "Proceso de presupuesto y fabricación en HARCANDO: consulta, presupuesto detallado y fabricación con instalación.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Consulta inicial",
+      "text": "Contactanos por WhatsApp o email con medidas, fotos o planos. Respondemos en 48 horas y coordinamos visita a obra si es necesario."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Presupuesto detallado",
+      "text": "Enviamos presupuesto por ítem: materiales, fabricación e instalación. Validez 15 días. Se confirma con 50% de anticipo."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Fabricación e instalación",
+      "text": "Fabricamos en nuestro taller de Rosario e instalamos en obra. El saldo se paga contra entrega."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿En qué zonas de Rosario trabajan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trabajamos en Rosario y Gran Rosario: Fisherton, Funes y Roldán son nuestras zonas principales. Para proyectos fuera de esa área evaluamos según el trabajo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda la fabricación de una reja o portón?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El plazo depende del trabajo. Rejas y barandas simples: 1 a 2 semanas desde el pago del anticipo. Portones o trabajos de mayor escala: 2 a 4 semanas. El plazo se confirma al presupuestar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El presupuesto incluye instalación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El presupuesto de HARCANDO incluye materiales, fabricación e instalación en obra. No hay costos ocultos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo es la forma de pago?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "50% de anticipo al confirmar el trabajo y 50% de saldo contra entrega e instalación. El anticipo cubre la compra de materiales y reserva la agenda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan con arquitectos y estudios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Trabajamos con arquitectos, estudios de arquitectura y constructoras del Gran Rosario. Presupuestamos con planos y nos adaptamos a los tiempos de obra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una reja en Rosario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El precio depende de medidas, diseño y material. Cada reja se presupuesta a medida, sin catálogo. La forma más rápida de obtener un precio es enviar medidas y una foto por WhatsApp."
+      }
+    }
+  ]
 }
 </script>
 
@@ -704,6 +807,54 @@ footer {
 }
 
 /* ============================================================
+   FAQ
+   ============================================================ */
+  .faq { background: var(--bg-alt); }
+  .faq-list {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--line);
+  }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+  }
+  .faq-q:hover { color: var(--ink-soft); }
+  .faq-q-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--ink-muted);
+    transition: transform 0.25s var(--ease);
+  }
+  .faq-item.open .faq-q-icon { transform: rotate(45deg); }
+  .faq-a {
+    display: none;
+    padding: 0 0 22px 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    max-width: 640px;
+  }
+  .faq-item.open .faq-a { display: block; }
+
+/* ============================================================
    UTILITIES
    ============================================================ */
 .sr-only {
@@ -727,7 +878,8 @@ footer {
       <ul class="nav-links">
         <li><a href="#trabajos">Trabajos</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#proceso">Cómo trabajamos</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="https://wa.me/5493416053907" target="_blank" rel="noopener" class="nav-cta">Presupuesto →</a></li>
       </ul>
       <button class="nav-burger" id="burger" aria-label="Menú">
@@ -742,7 +894,8 @@ footer {
   <button class="nav-mobile-close" id="nav-close" aria-label="Cerrar">✕</button>
   <a href="#trabajos" class="nav-mobile-link">Trabajos</a>
   <a href="#nosotros" class="nav-mobile-link">Nosotros</a>
-  <a href="#proceso" class="nav-mobile-link">Cómo trabajamos</a>
+  <a href="#proceso" class="nav-mobile-link">Proceso</a>
+  <a href="#faq" class="nav-mobile-link">FAQ</a>
   <a href="#contacto" class="nav-mobile-link">Contacto</a>
   <a href="https://wa.me/5493416053907" target="_blank" rel="noopener" class="cta-mobile">Pedir presupuesto →</a>
 </div>
@@ -1010,6 +1163,81 @@ footer {
 
 
 <!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <p class="section-label">Preguntas frecuentes</p>
+    <h2 class="section-title">Lo que más<br>nos preguntan.</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          ¿En qué zonas de Rosario trabajan?
+          <svg class="faq-q-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <p class="faq-a">Trabajamos en Rosario y Gran Rosario: Fisherton, Funes y Roldán son nuestras zonas principales. Para proyectos fuera de esa área evaluamos según el trabajo — consultanos igual.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          ¿Cuánto tarda la fabricación de una reja o portón?
+          <svg class="faq-q-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <p class="faq-a">Depende del trabajo. Rejas y barandas: 1 a 2 semanas desde el anticipo. Portones o trabajos de mayor escala: 2 a 4 semanas. El plazo exacto se confirma al presupuestar.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          ¿El presupuesto incluye instalación?
+          <svg class="faq-q-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <p class="faq-a">Sí. El precio incluye materiales, fabricación e instalación en obra. No hay costos adicionales ocultos. Si el trabajo requiere pintado especial o motorización, lo aclaramos en el presupuesto.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          ¿Cómo es la forma de pago?
+          <svg class="faq-q-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <p class="faq-a">50% de anticipo al confirmar el trabajo y 50% de saldo contra entrega e instalación. El anticipo cubre la compra de materiales y reserva la agenda.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          ¿Trabajan con arquitectos y estudios?
+          <svg class="faq-q-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <p class="faq-a">Sí. Trabajamos con arquitectos, estudios y constructoras del Gran Rosario desde el año 2000. Presupuestamos con planos, definimos materiales y nos adaptamos a los tiempos de cada obra.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          ¿Cómo pido un presupuesto?
+          <svg class="faq-q-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <line x1="10" y1="4" x2="10" y2="16"/><line x1="4" y1="10" x2="16" y2="10"/>
+          </svg>
+        </button>
+        <p class="faq-a">La forma más rápida es WhatsApp: mandanos medidas, una foto o el plano. En 48 horas tenés respuesta. Si el trabajo lo requiere, coordinamos una visita a obra sin cargo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
      FOOTER
      ============================================================ -->
 <footer>
@@ -1023,6 +1251,7 @@ footer {
         <a href="#trabajos">Trabajos</a>
         <a href="#nosotros">El taller</a>
         <a href="#proceso">Cómo trabajamos</a>
+        <a href="#faq">FAQ</a>
         <a href="#contacto">Contacto</a>
       </div>
       <div class="footer-links">
@@ -1046,6 +1275,22 @@ footer {
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 
   // Mobile menu
   const burger = document.getElementById('burger');
