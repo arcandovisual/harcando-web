@@ -6,6 +6,11 @@
 <meta name="description" content="Herrería a medida en Rosario desde el año 2000 — rejas, barandas, portones, escaleras, estructuras y muebles de hierro. 26 años de oficio. Presupuesto sin cargo.">
 <title>HARCANDO · Herrería · Rosario</title>
 
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
 <link rel="canonical" href="https://harcando.com.ar">
 
 <meta property="og:title" content="HARCANDO · Herrería · Rosario">
@@ -238,13 +243,18 @@ nav.scrolled {
   height: 64px;
 }
 .nav-logo {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--white);
-  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
-nav.scrolled .nav-logo { color: var(--ink); }
+.nav-logo img {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+.nav-logo-dark { display: none; }
+nav.scrolled .nav-logo-light { display: none; }
+nav.scrolled .nav-logo-dark { display: block; }
 .nav-links {
   display: none;
   list-style: none;
@@ -845,11 +855,13 @@ footer {
 }
 .footer-brand {}
 .footer-logo {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--white);
-  margin-bottom: 8px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.footer-logo img {
+  height: 28px;
+  width: auto;
+  display: block;
 }
 .footer-tagline {
   font-size: 12px;
@@ -954,7 +966,10 @@ footer {
 <nav id="nav">
   <div class="container">
     <div class="nav-inner">
-      <a href="#inicio" class="nav-logo">HARCANDO</a>
+      <a href="#inicio" class="nav-logo" aria-label="HARCANDO — inicio">
+        <img class="nav-logo-light" src="assets/logo-light.png" alt="HARCANDO" width="600" height="123">
+        <img class="nav-logo-dark"  src="assets/logo-dark.png"  alt="" aria-hidden="true" width="600" height="123">
+      </a>
       <ul class="nav-links">
         <li><a href="#trabajos">Trabajos</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
@@ -1378,7 +1393,9 @@ footer {
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo">HARCANDO</div>
+        <a href="#inicio" class="footer-logo" aria-label="HARCANDO — inicio">
+          <img src="assets/logo-light.png" alt="HARCANDO" width="600" height="123">
+        </a>
         <div class="footer-tagline">Herrería · Arquitectura · Diseño</div>
       </div>
       <div class="footer-links">
