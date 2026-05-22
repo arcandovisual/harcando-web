@@ -649,33 +649,133 @@ nav.scrolled .nav-burger span { background: var(--ink); }
    CONTACTO
    ============================================================ */
 .contacto { background: var(--bg); }
+.contacto-head { margin-bottom: 52px; }
 .contacto-inner {
   display: grid;
-  gap: 64px;
+  gap: 24px;
   align-items: start;
 }
-@media (min-width: 768px) { .contacto-inner { grid-template-columns: 1fr 1fr; } }
-.contacto-left .section-body { margin-bottom: 40px; }
+@media (min-width: 860px) {
+  .contacto-inner { grid-template-columns: 1.15fr 0.85fr; gap: 28px; }
+}
+.contacto-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+}
+@media (min-width: 768px) { .contacto-card { padding: 44px; } }
+.contacto-card-intro {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
 
+/* --- formulario --- */
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr; gap: 18px; }
+@media (min-width: 520px) { .form-row { grid-template-columns: 1fr 1fr; } }
+.form-field { display: flex; flex-direction: column; }
+.form-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 7px;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 12px 14px;
+  transition: border-color 0.2s;
+}
+.form-input::placeholder, .form-textarea::placeholder { color: var(--ink-muted); }
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+.form-textarea { resize: vertical; min-height: 112px; line-height: 1.6; }
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 38px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239a9a97' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.form-submit {
+  margin-top: 2px;
+  padding: 15px 24px;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.form-submit:hover { opacity: 0.85; }
+.form-submit:disabled { opacity: 0.55; cursor: progress; }
+.form-status {
+  display: none;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 12px 14px;
+  border-radius: 4px;
+}
+.form-status.ok  { display: block; background: #edf3ee; color: #2f5d3a; border: 1px solid #cfe0d2; }
+.form-status.err { display: block; background: #f5eded; color: #7a3838; border: 1px solid #e3cfcf; }
+.form-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* --- columna lateral --- */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  padding: 16px 32px;
+  width: 100%;
+  padding: 15px 24px;
   background: var(--ink);
   color: var(--white);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 4px;
   transition: opacity 0.2s;
   font-family: var(--font);
 }
 .btn-whatsapp:hover { opacity: 0.82; }
 .btn-whatsapp svg { flex-shrink: 0; }
-
+.aside-block + .aside-block {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.aside-title {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 14px;
+}
+.aside-text {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
 .contact-list {
   list-style: none;
-  margin-top: 24px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -695,37 +795,23 @@ nav.scrolled .nav-burger span { background: var(--ink); }
   flex-shrink: 0;
   color: var(--ink-muted);
 }
-
-.contacto-right {
-  background: var(--bg-alt);
-  border: 1px solid var(--line);
-  padding: 40px;
-}
-.zona-title {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 20px;
-}
 .zona-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 .zona-list li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--line);
   font-size: 15px;
   font-weight: 500;
   color: var(--ink);
 }
-.zona-list li:last-child { border-bottom: none; }
+.zona-list li:first-child { padding-top: 0; }
+.zona-list li:last-child { border-bottom: none; padding-bottom: 0; }
 .zona-list .zona-tag {
   font-size: 11px;
   font-weight: 500;
@@ -735,12 +821,6 @@ nav.scrolled .nav-burger span { background: var(--ink); }
   background: var(--bg);
   padding: 3px 8px;
   border-radius: 2px;
-}
-.zona-note {
-  font-size: 13px;
-  color: var(--ink-muted);
-  margin-top: 20px;
-  line-height: 1.5;
 }
 
 /* ============================================================
@@ -880,7 +960,7 @@ footer {
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#proceso">Proceso</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="https://wa.me/5493416053907" target="_blank" rel="noopener" class="nav-cta">Presupuesto →</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
       </ul>
       <button class="nav-burger" id="burger" aria-label="Menú">
         <span></span><span></span><span></span>
@@ -896,8 +976,7 @@ footer {
   <a href="#nosotros" class="nav-mobile-link">Nosotros</a>
   <a href="#proceso" class="nav-mobile-link">Proceso</a>
   <a href="#faq" class="nav-mobile-link">FAQ</a>
-  <a href="#contacto" class="nav-mobile-link">Contacto</a>
-  <a href="https://wa.me/5493416053907" target="_blank" rel="noopener" class="cta-mobile">Pedir presupuesto →</a>
+  <a href="#contacto" class="cta-mobile">Contacto →</a>
 </div>
 
 
@@ -1115,46 +1194,101 @@ footer {
      ============================================================ -->
 <section class="contacto" id="contacto">
   <div class="container">
+
+    <div class="contacto-head">
+      <p class="section-label">Contacto</p>
+      <h2 class="section-title">¿Tenés un proyecto?<br>Hablemos.</h2>
+    </div>
+
     <div class="contacto-inner">
 
-      <div class="contacto-left">
-        <p class="section-label">Contacto</p>
-        <h2 class="section-title">¿Tenés un proyecto?<br>Hablemos.</h2>
-        <p class="section-body">La forma más rápida es WhatsApp. Contanos qué necesitás — una foto, unas medidas o solo la idea — y te respondemos en el día.</p>
+      <!-- FORMULARIO -->
+      <div class="contacto-card">
+        <p class="contacto-card-intro">Completá el formulario con los datos de tu proyecto y te respondemos por email a la brevedad. Cuanto más nos cuentes — medidas, ubicación, plazos — más preciso será el presupuesto.</p>
 
-        <a href="https://wa.me/5493416053907" target="_blank" rel="noopener" class="btn-whatsapp">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.556 4.122 1.524 5.857L.057 23.882l6.22-1.447A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.788 9.788 0 01-5.032-1.393l-.361-.213-3.722.866.927-3.598-.236-.372A9.781 9.781 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
-          </svg>
-          Escribinos por WhatsApp
-        </a>
+        <form class="contact-form" id="contact-form" accept-charset="UTF-8">
+          <input type="hidden" name="access_key" value="ee87913a-98d7-4258-bd7a-cd46675ea819">
+          <input type="hidden" name="subject" value="Nuevo contacto desde harcando.com.ar">
+          <input type="hidden" name="from_name" value="Web HARCANDO">
+          <input type="checkbox" name="botcheck" class="form-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-        <ul class="contact-list">
-          <li>
-            <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
-            </svg>
-            <a href="mailto:info@harcando.com.ar">info@harcando.com.ar</a>
-          </li>
-          <li>
-            <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-            <a href="https://instagram.com/harcando.herreria" target="_blank" rel="noopener">@harcando.herreria</a>
-          </li>
-        </ul>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="f-nombre">Nombre *</label>
+              <input class="form-input" type="text" id="f-nombre" name="nombre" required>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="f-telefono">Teléfono</label>
+              <input class="form-input" type="tel" id="f-telefono" name="telefono">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="f-email">Email *</label>
+            <input class="form-input" type="email" id="f-email" name="email" required>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="f-trabajo">Tipo de trabajo</label>
+            <select class="form-select" id="f-trabajo" name="tipo_de_trabajo">
+              <option value="">Elegí una opción</option>
+              <option>Rejas</option>
+              <option>Barandas</option>
+              <option>Portones</option>
+              <option>Escaleras</option>
+              <option>Estructuras</option>
+              <option>Muebles</option>
+              <option>Otro / No estoy seguro</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="f-mensaje">Mensaje *</label>
+            <textarea class="form-textarea" id="f-mensaje" name="mensaje" required placeholder="Contanos qué necesitás…"></textarea>
+          </div>
+
+          <button type="submit" class="form-submit" id="form-submit">Enviar mensaje</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
 
-      <div class="contacto-right">
-        <div class="zona-title">Zona de servicio</div>
-        <ul class="zona-list">
-          <li>Rosario <span class="zona-tag">base</span></li>
-          <li>Fisherton <span class="zona-tag">zona norte</span></li>
-          <li>Funes <span class="zona-tag">gran rosario</span></li>
-          <li>Roldán <span class="zona-tag">gran rosario</span></li>
-        </ul>
-        <p class="zona-note">¿Fuera de zona? Consultanos igual — evaluamos según el proyecto.</p>
+      <!-- VÍA RÁPIDA + ZONA -->
+      <div class="contacto-card">
+        <div class="aside-block">
+          <div class="aside-title">Vía rápida</div>
+          <p class="aside-text">¿Preferís algo más directo? Escribinos por WhatsApp con una foto o la idea y te respondemos en el día.</p>
+          <a href="https://wa.me/5493416053907" target="_blank" rel="noopener" class="btn-whatsapp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.556 4.122 1.524 5.857L.057 23.882l6.22-1.447A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.788 9.788 0 01-5.032-1.393l-.361-.213-3.722.866.927-3.598-.236-.372A9.781 9.781 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+            </svg>
+            Escribinos por WhatsApp
+          </a>
+          <ul class="contact-list">
+            <li>
+              <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
+              </svg>
+              <a href="mailto:info@harcando.com.ar">info@harcando.com.ar</a>
+            </li>
+            <li>
+              <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              <a href="https://instagram.com/harcando.herreria" target="_blank" rel="noopener">@harcando.herreria</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="aside-block">
+          <div class="aside-title">Zona de servicio</div>
+          <ul class="zona-list">
+            <li>Rosario <span class="zona-tag">base</span></li>
+            <li>Fisherton <span class="zona-tag">zona norte</span></li>
+            <li>Funes <span class="zona-tag">gran rosario</span></li>
+            <li>Roldán <span class="zona-tag">gran rosario</span></li>
+          </ul>
+        </div>
       </div>
 
     </div>
@@ -1301,6 +1435,41 @@ footer {
   closeBtn.addEventListener('click', () => mobileMenu.classList.remove('open'));
   mobileMenu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // Contact form (Web3Forms)
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  const formSubmit = document.getElementById('form-submit');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    formStatus.className = 'form-status';
+    formSubmit.disabled = true;
+    formSubmit.textContent = 'Enviando…';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm)
+      });
+      const data = await res.json();
+      if (data.success) {
+        formStatus.textContent = '✓ Mensaje enviado. Te respondemos a la brevedad.';
+        formStatus.classList.add('ok');
+        contactForm.reset();
+      } else {
+        formStatus.textContent = 'No se pudo enviar. Probá de nuevo o escribinos por WhatsApp.';
+        formStatus.classList.add('err');
+      }
+    } catch (err) {
+      formStatus.textContent = 'No se pudo enviar. Probá de nuevo o escribinos por WhatsApp.';
+      formStatus.classList.add('err');
+    }
+
+    formSubmit.disabled = false;
+    formSubmit.textContent = 'Enviar mensaje';
   });
 </script>
 
