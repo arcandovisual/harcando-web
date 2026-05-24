@@ -47,15 +47,14 @@ Guías escritas desde el taller — información concreta para arquitectos, estu
 
 - [¿Cuánto cuesta una reja en Rosario? Factores reales y rangos 2026](https://harcando.com.ar/notas/cuanto-cuesta-una-reja-en-rosario/) — Los 6 factores que definen el precio de una reja a medida (superficie, diseño, perfil de hierro, terminación, herrajes e instalación) y cómo leer cualquier presupuesto sin equivocarse.
 - [Cómo elegir una baranda para tu escalera · Guía técnica 2026](https://harcando.com.ar/notas/como-elegir-baranda-escalera/) — Altura mínima según normativa argentina (0,90 m vivienda / 1,05 m edificios), separación máxima entre barrotes (10-12 cm), materiales (hierro, acero inoxidable, vidrio, madera), diseños habituales y cómo elegir el pasamanos correcto.
+- [Portón corredizo, abatible o levadizo: cuál conviene en cada caso · Guía 2026](https://harcando.com.ar/notas/porton-corredizo-abatible-levadizo/) — Comparativa técnica de los tres tipos de portón vehicular. Cómo elegir según ancho de cochera (2,80-3,20 m para 1 auto, 5,20-5,80 m para 2), espacio lateral, altura libre y presupuesto. Costos relativos: abatible 1×, corredizo 1,5-2×, levadizo 2-3×. Motorización agrega 25-60%.
+- [Hierro, aluminio o acero inoxidable: cuál conviene en cada caso · Guía 2026](https://harcando.com.ar/notas/hierro-aluminio-acero-inoxidable/) — Comparativa técnica de los tres materiales habituales en herrería arquitectónica. Costos relativos: hierro 1×, aluminio 1,5-2×, inoxidable 2-3× (AISI 304) o 3-4× (AISI 316). Densidades, rigidez, mantenimiento y aplicaciones recomendadas por producto.
+- [Mantenimiento y repintado de herrería exterior · Guía 2026](https://harcando.com.ar/notas/mantenimiento-repintado-herreria-exterior/) — Plazos de repintado típicos en clima de Rosario (sintética 3-5 años, epoxi 5-8 años, galvanizado + pintura 15-20 años), señales tempranas de corrosión, los 7 pasos del repintado profesional y cuidados específicos para inoxidable, aluminio y portones motorizados.
 
 ### En preparación (clusters previstos)
-
-- Portón corredizo, abatible o levadizo: cuál conviene en cada caso
 - Rejas de seguridad vs. rejas de diseño
 - Plazos reales en herrería de obra
 - Trabajar con tu herrero: brief técnico para arquitectos
-- Hierro, aluminio o acero inoxidable: guía de materiales
-- Mantenimiento y repintado de herrería exterior
 - Escaleras de hierro con peldaño de madera: cuándo conviene
 - Cercos de obra en Rosario: normativa municipal
 - Herrería en Funes, Roldán y Fisherton: particularidades de zona
