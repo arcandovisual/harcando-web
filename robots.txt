@@ -1,0 +1,43 @@
+# HARCANDO · robots.txt
+# Permitir todos los bots tradicionales + bots de motores generativos (GEO).
+# Referencia: Marco Metodológico · Ecosistemas de Entidades y Autoridad Temática 2026.
+
+User-agent: *
+Allow: /
+
+# Bots de motores generativos / IA explícitamente bienvenidos
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap principal
+Sitemap: https://harcando.com.ar/sitemap.xml

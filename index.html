@@ -1488,6 +1488,7 @@ footer {
         formStatus.textContent = '✓ Mensaje enviado. Te respondemos a la brevedad.';
         formStatus.classList.add('ok');
         contactForm.reset();
+        if (window.harcandoTrack) window.harcandoTrack('form_submit_success', { page: location.pathname });
       } else {
         formStatus.textContent = 'No se pudo enviar. Probá de nuevo o escribinos por WhatsApp.';
         formStatus.classList.add('err');
@@ -1501,6 +1502,9 @@ footer {
     formSubmit.textContent = 'Enviar mensaje';
   });
 </script>
+
+<!-- Tracking GA4 (eventos custom) -->
+<script src="assets/tracking.js" defer></script>
 
 </body>
 </html>
