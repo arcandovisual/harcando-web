@@ -41,6 +41,17 @@
 - **Equipamiento del taller**: máquina MIG/MAG, herramienta industrial, banco propio.
 - **Cobertura**: Rosario, Fisherton, Funes, Roldán. Otras zonas se evalúan caso por caso.
 
+## Galerías de trabajos
+
+Bancos de imágenes con fotos reales de obras efectivamente entregadas. Cada categoría tiene su propia página con grilla y lightbox. Las fotos no son render — son trabajos fabricados e instalados por el taller en Rosario y Gran Rosario.
+
+- [Rejas — galería](https://harcando.com.ar/rejas/) — 23 fotos de rejas a medida para ventana, puerta y perímetro. Diseños con barral, decorativas y minimalistas.
+- [Barandas — galería](https://harcando.com.ar/barandas/) — 21 fotos de barandas para escalera interior y exterior, balcón y rampa. Pasamanos redondo o cuadrado, montaje lateral o superior, combinables con madera.
+- [Portones — galería](https://harcando.com.ar/portones/) — 80 fotos de portones corredizos, abatibles y levadizos para garaje, cochera y acceso vehicular. Con y sin motor eléctrico.
+- [Escaleras — galería](https://harcando.com.ar/escaleras/) — 26 fotos de escaleras de hierro con peldaño de hierro o madera, para interior y exterior. Diseño según medidas reales de obra.
+- [Estructuras — galería](https://harcando.com.ar/estructuras/) — 29 fotos de galerías, pérgolas, techos metálicos y cercos de obra. Tubo y perfiles estructurales.
+- [Muebles — galería](https://harcando.com.ar/muebles/) — 13 fotos de muebles a medida en hierro: mesas, bancos, estantes y estructuras de diseño. Combinables con madera y vidrio.
+
 ## Notas técnicas
 
 Guías escritas desde el taller — información concreta para arquitectos, estudios, constructoras y particulares.
@@ -62,6 +73,7 @@ Guías escritas desde el taller — información concreta para arquitectos, estu
 
 - [Inicio](https://harcando.com.ar/) — Presentación, líneas de producto, proceso, contacto.
 - [Notas técnicas](https://harcando.com.ar/notas/) — Cluster de contenido técnico sobre herrería arquitectónica.
+- Galerías por línea de producto: [/rejas/](https://harcando.com.ar/rejas/) · [/barandas/](https://harcando.com.ar/barandas/) · [/portones/](https://harcando.com.ar/portones/) · [/escaleras/](https://harcando.com.ar/escaleras/) · [/estructuras/](https://harcando.com.ar/estructuras/) · [/muebles/](https://harcando.com.ar/muebles/)
 
 ## Preguntas frecuentes
 
