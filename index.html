@@ -525,7 +525,7 @@ nav.scrolled .nav-burger span { background: var(--ink); }
 }
 
 /* ============================================================
-   TRABAJOS
+   TRABAJOS — hero cards con imagen de producto
    ============================================================ */
 .trabajos { background: var(--bg); }
 .trabajos-header {
@@ -533,55 +533,86 @@ nav.scrolled .nav-burger span { background: var(--ink); }
 }
 .trabajos-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2px;
 }
-@media (min-width: 600px)  { .trabajos-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 900px)  { .trabajos-grid { grid-template-columns: repeat(6, 1fr); } }
+@media (min-width: 600px)  { .trabajos-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .trabajos-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .trabajo-card {
-  background: var(--bg-alt);
-  padding: 36px 28px;
-  transition: background 0.2s;
-  cursor: default;
-  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: var(--bg-dark);
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
   margin: -0.5px;
+  isolation: isolate;
+  cursor: default;
 }
-.trabajo-card:hover { background: var(--ink); }
-.trabajo-card:hover .trabajo-name,
-.trabajo-card:hover .trabajo-desc,
-.trabajo-card:hover .trabajo-icon path,
-.trabajo-card:hover .trabajo-icon line,
-.trabajo-card:hover .trabajo-icon rect,
-.trabajo-card:hover .trabajo-icon circle,
-.trabajo-card:hover .trabajo-icon polyline { color: var(--white); stroke: var(--white); }
+@media (min-width: 768px) {
+  .trabajo-card { min-height: 360px; padding: 40px 36px; }
+}
+
+/* Overlay oscuro para legibilidad del texto */
+.trabajo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
+  z-index: -1;
+  transition: background 0.5s var(--ease), transform 0.6s var(--ease);
+}
+
+/* Hover (solo desktop): degradé sutil + leve zoom de la imagen */
+@media (hover: hover) and (pointer: fine) {
+  .trabajo-card {
+    transition: background-size 0.6s var(--ease);
+  }
+  .trabajo-card:hover {
+    background-size: 108% auto;
+  }
+  .trabajo-card:hover::before {
+    background: linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.55) 100%);
+  }
+}
+
 .trabajo-icon {
   width: 40px;
   height: 40px;
   margin-bottom: 20px;
-  color: var(--ink);
+  color: var(--white);
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
 }
 .trabajo-icon path,
 .trabajo-icon line,
 .trabajo-icon rect,
 .trabajo-icon circle,
-.trabajo-icon polyline {
-  stroke: var(--ink);
-  transition: stroke 0.2s;
-}
+.trabajo-icon polyline { stroke: var(--white); }
+
 .trabajo-name {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--ink);
+  letter-spacing: -0.015em;
+  color: var(--white);
   margin-bottom: 8px;
-  transition: color 0.2s;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
+@media (min-width: 768px) {
+  .trabajo-name { font-size: 24px; }
+}
+
 .trabajo-desc {
-  font-size: 13px;
-  color: var(--ink-soft);
-  line-height: 1.5;
-  transition: color 0.2s;
+  font-size: 14px;
+  color: rgba(245,245,243,0.85);
+  line-height: 1.55;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  max-width: 360px;
 }
 
 /* ============================================================
@@ -1074,7 +1105,7 @@ footer {
     <div class="trabajos-grid">
 
       <!-- Rejas -->
-      <div class="trabajo-card">
+      <div class="trabajo-card" style="--card-bg: url('assets/img/products/rejas.jpg')">
         <svg class="trabajo-icon" viewBox="0 0 40 40" fill="none" stroke-width="1.5" stroke-linecap="round">
           <rect x="4" y="6" width="32" height="28" rx="1"/>
           <line x1="12" y1="6" x2="12" y2="34"/>
@@ -1086,7 +1117,7 @@ footer {
       </div>
 
       <!-- Barandas -->
-      <div class="trabajo-card">
+      <div class="trabajo-card" style="--card-bg: url('assets/img/products/barandas.jpg')">
         <svg class="trabajo-icon" viewBox="0 0 40 40" fill="none" stroke-width="1.5" stroke-linecap="round">
           <line x1="4" y1="12" x2="36" y2="12"/>
           <line x1="8" y1="12" x2="8" y2="34"/>
@@ -1099,7 +1130,7 @@ footer {
       </div>
 
       <!-- Portones -->
-      <div class="trabajo-card">
+      <div class="trabajo-card" style="--card-bg: url('assets/img/products/portones.jpg')">
         <svg class="trabajo-icon" viewBox="0 0 40 40" fill="none" stroke-width="1.5" stroke-linecap="round">
           <rect x="4" y="6" width="14" height="28" rx="1"/>
           <rect x="22" y="6" width="14" height="28" rx="1"/>
@@ -1114,7 +1145,7 @@ footer {
       </div>
 
       <!-- Escaleras -->
-      <div class="trabajo-card">
+      <div class="trabajo-card" style="--card-bg: url('assets/img/products/escaleras.jpg')">
         <svg class="trabajo-icon" viewBox="0 0 40 40" fill="none" stroke-width="1.5" stroke-linecap="round">
           <polyline points="4,36 4,28 12,28 12,20 20,20 20,12 28,12 28,4 36,4"/>
           <line x1="4" y1="36" x2="36" y2="36"/>
@@ -1124,7 +1155,7 @@ footer {
       </div>
 
       <!-- Muebles -->
-      <div class="trabajo-card">
+      <div class="trabajo-card" style="--card-bg: url('assets/img/products/muebles.jpg')">
         <svg class="trabajo-icon" viewBox="0 0 40 40" fill="none" stroke-width="1.5" stroke-linecap="round">
           <rect x="4" y="10" width="32" height="6" rx="1"/>
           <line x1="8" y1="16" x2="8" y2="34"/>
@@ -1137,7 +1168,7 @@ footer {
       </div>
 
       <!-- Estructuras -->
-      <div class="trabajo-card">
+      <div class="trabajo-card" style="--card-bg: url('assets/img/products/estructuras.jpg')">
         <svg class="trabajo-icon" viewBox="0 0 40 40" fill="none" stroke-width="1.5" stroke-linecap="round">
           <line x1="4" y1="32" x2="36" y2="32"/>
           <line x1="4" y1="32" x2="4" y2="18"/>
