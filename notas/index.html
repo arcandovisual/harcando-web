@@ -156,6 +156,7 @@
       <ul class="nav-links">
         <li><a href="../#trabajos">Trabajos</a></li>
         <li><a href="../#nosotros">Nosotros</a></li>
+        <li><a href="../#proceso">Proceso</a></li>
         <li><a href="./" class="active">Notas</a></li>
         <li><a href="../#faq">FAQ</a></li>
         <li><a href="../#contacto" class="nav-cta">Contacto</a></li>
@@ -171,6 +172,7 @@
   <button class="nav-mobile-close" id="nav-close" aria-label="Cerrar">✕</button>
   <a href="../#trabajos">Trabajos</a>
   <a href="../#nosotros">Nosotros</a>
+  <a href="../#proceso">Proceso</a>
   <a href="./">Notas</a>
   <a href="../#faq">FAQ</a>
   <a href="../#contacto">Contacto →</a>
@@ -357,7 +359,7 @@
   const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('nav-mobile');
   const closeBtn = document.getElementById('nav-close');
-  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
   closeBtn.addEventListener('click', () => mobileMenu.classList.remove('open'));
   mobileMenu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => mobileMenu.classList.remove('open'));
